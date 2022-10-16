@@ -18,6 +18,7 @@ Made for Debian 11
 | Composer  | Yes   |
 | Docker    | Yes   |
 | Mariadb   | Yes   |
+| NodeJs       | Yes   |
 | Php       | Yes   |
 | Sqlite3   | Yes   |
 | Symfony   | Yes   |   
