@@ -131,6 +131,9 @@ printf "\nDo you want to create a phpmyadmin user? (y/n) "
 read -r create_user
 
 # if create_user is empty set it to y
+if [ -z "$create_user" ]; then
+  create_user="y"
+fi
 
 if [ "$create_user" = "y" ]; then
     # Ask for the username
