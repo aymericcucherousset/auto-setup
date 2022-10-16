@@ -112,13 +112,13 @@ if [ -z "$port" ]; then
   port="80"
 fi
 
-printf "Enter the server name of the virtual host (default: $i): "
+printf "Enter the server name of the virtual host (default: $ip): "
 read -r servername
 if [ -z "$servername" ]; then
   servername="$ip"
 fi
 
-printf "Enter the server alias of the virtual host (default: www.$i): "
+printf "Enter the server alias of the virtual host (default: www.$ip): "
 read -r serveralias
 if [ -z "$serveralias" ]; then
   serveralias="www.$ip"
@@ -166,5 +166,5 @@ systemctl restart apache2
 
 printf "\nWordpress is installed.\n"
 
-printf "You can access to wordpress at http://$ip/$folder\n"
+printf "You can access to wordpress at http://$ip/\n"
 exit 0
