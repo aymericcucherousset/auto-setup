@@ -3,7 +3,7 @@ printf "\nInstallation of Wordpress\n"
 
 cd "$(dirname "$0")"
 # Get the local IP address of the server:
-ip=hostname -I | cut -d' ' -f1
+ip=ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'
 
 # Check if apache2 is already installed
 if [ -f /usr/sbin/apache2 ]; then
