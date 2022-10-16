@@ -2,7 +2,11 @@
 
 This Bash script setup software in Debian Distribution.   
 
-``` git clone https://github.com/aymericcucherousset/auto-setup.git | sh ./auto-setup/start.sh```   
+``` git clone https://github.com/aymericcucherousset/auto-setup.git && cd auto-setup```   
+Adding rights :   
+``` chmod +x ./start.sh```  
+Starting installation program :   
+``` ./start.sh```  
 
 Made for Debian 11
 
