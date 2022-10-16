@@ -47,8 +47,8 @@ fi
 wget https://wordpress.org/latest.tar.gz
 tar -xvzf latest.tar.gz
 rm latest.tar.gz
-mv wordpress "$path"
-mv $path/wordpress $path/$folder
+mv wordpress "$folder"
+mv "$folder" "$path/"
 
 # Create the database
 printf "\nCreate the database for wordpress\n"
