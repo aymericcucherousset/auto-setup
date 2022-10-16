@@ -21,6 +21,7 @@ Made for Debian 11
 | Mariadb     | Yes   |
 | NodeJs      | Yes   |
 | Php         | Yes   |
+| PhpMyAdmin  | Yes   |
 | Sqlite3     | Yes   |
 | Symfony     | Yes   |
 | Wordpress   | Yes   |   
