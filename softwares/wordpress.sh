@@ -1,6 +1,7 @@
 #!/bin/bash
 printf "\nInstallation of Wordpress\n"
 
+cd "$(dirname "$0")"
 # Get the local IP address of the server:
 ip=hostname -I | cut -d' ' -f1
 
