@@ -22,7 +22,8 @@ Made for Debian 11
 | NodeJs      | Yes   |
 | Php         | Yes   |
 | Sqlite3     | Yes   |
-| Symfony     | Yes   |   
+| Symfony     | Yes   |
+| Wordpress   | Yes   |   
    
 ## Unistall ## 
 
