@@ -25,15 +25,12 @@ fi
 # Getting the file name
 file=$(ls $FILES | sed -n "$num"p)
 
-# Check if the file exists
+# Check if the file exists & Execute the software installation script
 if [ -f "$file" ]; then
-  # Execute the file
-  bash $file
+    apt update
+    # Execute the file
+    bash $file
 else
-  echo "File not found"
-  exit 1
+    echo "File not found"
+    exit 1
 fi
-
-# Execute the software installation script
-apt update
-sh $file
