@@ -24,8 +24,9 @@ elif [ $num -eq 2 ]; then
 elif [ $num -eq 3 ]; then
   apt install php8.1 php8.1-cli php8.1-common php8.1-curl php8.1-gd php8.1-intl php8.1-json php8.1-mbstring php8.1-mysql php8.1-opcache php8.1-readline php8.1-xml php8.1-zip -y
 elif [ $num -eq 4 ]; then
-  curl -sSL https://packages.sury.org/php/README.txt | bash -x
-  apt install php php-cli php-common php-curl php-gd php-intl php-json php-mbstring php-mysql php-slite3 php-opcache php-readline php-xml php-zip -y
+    apt install curl
+    curl -sSL https://packages.sury.org/php/README.txt | bash -x
+    apt install php php-cli php-common php-curl php-gd php-intl php-json php-mbstring php-mysql php-sqlite3 php-readline php-xml php-zip -y
 fi
 
 apt install libapache2-mod-php -y
