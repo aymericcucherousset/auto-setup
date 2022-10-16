@@ -16,6 +16,7 @@ Made for Debian 11
 | :-------: | ----- |
 | Apache2   | Yes   |
 | Composer  | Yes   |
+| Docker    | Yes   |
 | Mariadb   | Yes   |
 | Php       | Yes   |
 | Sqlite3   | Yes   |
