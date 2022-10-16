@@ -11,6 +11,9 @@ fi
 apt install mariadb-server mariadb-client -y
 systemctl start mariadb
 systemctl enable mariadb
-mysql_secure_installation
+
+# Secure mariadb
+
 printf "\nMariaDB is installed.\n"
+printf "\nSecure MariaDB, run command : mysql_secure_installation \n"
 exit 0
