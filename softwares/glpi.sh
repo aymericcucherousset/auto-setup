@@ -45,6 +45,9 @@ fi
 
 # installing dependencies
 apt-get install apcupsd php-apcu php-cas php-curl wget -y
+apt install apache2 php libapache2-mod-php mariadb-server php-mysqli php-mbstring php-curl php-gd php-simplexml php-intl php-ldap php-apcu php-xmlrpc php-cas php-zip php-bz2 php-ldap php-imap -y
+
+systemctl restart apache2
 
 # Download glpi
 wget https://github.com/glpi-project/glpi/releases/download/10.0.3/glpi-10.0.3.tgz
