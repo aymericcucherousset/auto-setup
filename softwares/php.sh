@@ -3,7 +3,7 @@ printf "\nInstallation of Php\n"
 
 # Ask wich version of php the user wants to install
 printf "\nWhich version of php do you want to install?\n"
-printf "1 : 7.4\n"
+printf "1 : 7.4 (default version)\n"
 printf "2 : 8.0\n"
 printf "3 : 8.1\n"
 printf "4 : Latest version\n"
