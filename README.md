@@ -12,16 +12,17 @@ Made for Debian 11
 
 ## Softwares Supported ##   
    
-| Softwares | Debian|
-| :-------: | ----- |
-| Apache2   | Yes   |
-| Composer  | Yes   |
-| Docker    | Yes   |
-| Mariadb   | Yes   |
-| NodeJs       | Yes   |
-| Php       | Yes   |
-| Sqlite3   | Yes   |
-| Symfony   | Yes   |   
+| Softwares   | Debian|
+| :---------: | ----- |
+| AdGuardHome | Yes   |
+| Apache2     | Yes   |
+| Composer    | Yes   |
+| Docker      | Yes   |
+| Mariadb     | Yes   |
+| NodeJs      | Yes   |
+| Php         | Yes   |
+| Sqlite3     | Yes   |
+| Symfony     | Yes   |   
    
 ## Unistall ## 
 
