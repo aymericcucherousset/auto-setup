@@ -8,6 +8,6 @@ if [ -f /usr/bin/sqlite3 ]; then
 fi
 
 # Install sqlite3
-apt install sqlite3
+apt install sqlite3 -y
 printf "\nSqlite3 is installed.\n"
 exit 0

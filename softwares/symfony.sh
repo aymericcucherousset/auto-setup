@@ -30,6 +30,6 @@ fi
 # Install symfony
 echo 'deb [trusted=yes] https://repo.symfony.com/apt/ /' | tee /etc/apt/sources.list.d/symfony-cli.list
 apt update
-apt install symfony-cli
+apt install symfony-cli -y
 printf "\nSymfony is installed.\n"
 exit 0

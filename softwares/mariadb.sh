@@ -8,7 +8,7 @@ if [ -f /usr/bin/mariadb ]; then
 fi
 
 # Install mariadb
-apt install mariadb-server mariadb-client
+apt install mariadb-server mariadb-client -y
 systemctl start mariadb
 systemctl enable mariadb
 mysql_secure_installation

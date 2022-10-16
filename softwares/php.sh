@@ -18,14 +18,14 @@ fi
 
 # Install the version of php the user wants
 if [ $num -eq 1 ]; then
-  apt install php7.4 php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-intl php7.4-json php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-xml php7.4-zip
+  apt install php7.4 php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-intl php7.4-json php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-xml php7.4-zip -y
 elif [ $num -eq 2 ]; then
-  apt install php8.0 php8.0-cli php8.0-common php8.0-curl php8.0-gd php8.0-intl php8.0-json php8.0-mbstring php8.0-mysql php8.0-opcache php8.0-readline php8.0-xml php8.0-zip
+  apt install php8.0 php8.0-cli php8.0-common php8.0-curl php8.0-gd php8.0-intl php8.0-json php8.0-mbstring php8.0-mysql php8.0-opcache php8.0-readline php8.0-xml php8.0-zip -y
 elif [ $num -eq 3 ]; then
-  apt install php8.1 php8.1-cli php8.1-common php8.1-curl php8.1-gd php8.1-intl php8.1-json php8.1-mbstring php8.1-mysql php8.1-opcache php8.1-readline php8.1-xml php8.1-zip
+  apt install php8.1 php8.1-cli php8.1-common php8.1-curl php8.1-gd php8.1-intl php8.1-json php8.1-mbstring php8.1-mysql php8.1-opcache php8.1-readline php8.1-xml php8.1-zip -y
 elif [ $num -eq 4 ]; then
   curl -sSL https://packages.sury.org/php/README.txt | bash -x
-  apt install php php-cli php-common php-curl php-gd php-intl php-json php-mbstring php-mysql php-slite3 php-opcache php-readline php-xml php-zip
+  apt install php php-cli php-common php-curl php-gd php-intl php-json php-mbstring php-mysql php-slite3 php-opcache php-readline php-xml php-zip -y
 fi
 printf "\nPhp is installed.\n"
 exit 0

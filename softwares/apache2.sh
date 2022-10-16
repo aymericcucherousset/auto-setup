@@ -7,7 +7,7 @@ if [ -f /usr/sbin/apache2 ]; then
   exit 0
 fi
 
-apt install apache2 libapache2-mod-php
+apt install apache2 libapache2-mod-php -y
 a2enmod rewrite
 systemctl restart apache2
 printf "\nApache2 is installed.\n"
