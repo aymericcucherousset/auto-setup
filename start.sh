@@ -7,14 +7,13 @@ FILES='softwares/*.sh'
 i=1
 
 printf "\nChose the software you want to install:\n\n"
-printf "\n0. Exit\n"
 
 for f in $FILES
 do
   echo "$i : $f "
   i=$((i+1))
 done
-
+printf "\n0 : Exit\n"
 printf "\n"
 read -p "Enter the number of the software you want to install: " num
 
