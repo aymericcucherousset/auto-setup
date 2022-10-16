@@ -27,5 +27,8 @@ elif [ $num -eq 4 ]; then
   curl -sSL https://packages.sury.org/php/README.txt | bash -x
   apt install php php-cli php-common php-curl php-gd php-intl php-json php-mbstring php-mysql php-slite3 php-opcache php-readline php-xml php-zip -y
 fi
+
+apt install libapache2-mod-php -y
+
 printf "\nPhp is installed.\n"
 exit 0
