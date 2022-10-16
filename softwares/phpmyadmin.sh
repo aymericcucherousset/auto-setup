@@ -1,6 +1,9 @@
 #!/bin/bash
 printf "\nInstallation of PhpMyAdmin\n"
 
+cd "$(dirname "$0")"
+ip=$(ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p')
+
 # Check if phpmyadmin is already installed
 if [ -f /usr/share/phpmyadmin ]; then
   echo "PhpMyAdmin is already installed"
@@ -69,7 +72,7 @@ sed -i "s/\$cfg\['TempDir'\] = ''/\$cfg\['TempDir'\] = '\/var\/lib\/phpmyadmin\/
 # Create the Apache configuration file
 touch /etc/apache2/conf-enabled/phpmyadmin.conf
 cat > /etc/apache2/conf-enabled/phpmyadmin.conf  << EOF
-"Alias /phpmyadmin /usr/share/phpmyadmin
+Alias /phpmyadmin /usr/share/phpmyadmin
 <Directory /usr/share/phpmyadmin>
     Options SymLinksIfOwnerMatch
     DirectoryIndex index.php
@@ -118,7 +121,32 @@ cat > /etc/apache2/conf-enabled/phpmyadmin.conf  << EOF
 </Directory>
 <Directory /usr/share/phpmyadmin/setup/lib>
     Require all denied
-</Directory>" 
+</Directory>
 EOF
 
 systemctl restart apache2
+
+# Ask if the user want to create a phpmyadmin user
+printf "\nDo you want to create a phpmyadmin user? (y/n) "
+read -r create_user
+
+# if create_user is empty set it to y
+
+if [ "$create_user" = "y" ]; then
+    # Ask for the username
+    printf "\nUsername: "
+    read -r username
+
+    # Ask for the password
+    printf "\nPassword: "
+    read -r password
+
+    # Create the mariadb user
+    mysql -u root -e "CREATE USER '$username'@'localhost' IDENTIFIED BY '$password';"
+    mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO '$username'@'localhost' WITH GRANT OPTION;"
+    mysql -u root -e "FLUSH PRIVILEGES;"
+    printf "\nUser created.\n"
+fi
+
+printf "\nPhpMyAdmin is installed.\n Open it in your browser: http://your-ip/phpmyadmin\n"
+exit 0
