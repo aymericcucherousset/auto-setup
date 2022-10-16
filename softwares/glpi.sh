@@ -84,3 +84,4 @@ mysql -u root -p -e "USE $database;"
 
 printf "\nGLPI is installed\n"
 printf "You can access it at http://$ip/$folder\n"
+exit 0
