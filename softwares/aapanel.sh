@@ -19,7 +19,3 @@ else
 fi
 
 echo "Aapanel is installed"
-
-# getting Aapanel credentials
-echo "Getting Aapanel credentials"
-cat /root/.aapanel_info.txt
