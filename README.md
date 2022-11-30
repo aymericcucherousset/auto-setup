@@ -2,6 +2,14 @@
 
 This Bash script setup software in Debian Distribution.   
 
+## Requirements ##
+
+Install git with root account
+```apt update && apt install git -y```
+
+Install git with sudo
+```sudo apt update && sudo apt install git -y```
+
 ## Installation ## 
 
 This bash line install on your computer the portable version of auto-setup :   
@@ -14,6 +22,7 @@ Made for Debian 11
    
 | Softwares   | Debian|
 | :---------: | ----- |
+| Aapanel     | Yes   |
 | AdGuardHome | Yes   |
 | Apache2     | Yes   |
 | Composer    | Yes   |
